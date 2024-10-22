@@ -92,7 +92,8 @@ th {
     flex-flow: wrap;
     justify-content: space-evenly;
 }
-.sudo {
+
+:hover.sudo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,18 +105,16 @@ th {
     height: 400px;
     background-size: cover; 
     z-index: 10;
-    transition: background-image 2s ease-in-out; /* Smooth transition */
-    
-}
-.sudo:hover {
     background-image: url("https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=400");
+    transition: 2s ease-in; 
+    .japan-card-image,.card-text{display: none;}
 }
 .japan-card-image {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcbhOk0gMJGGe6MnRYQPsjAd35Z-ST6ZKpPw&s");
     background-size: cover; 
     height: 205px;
     width: 205px;
 }
+
 .card-body {
     display: flex;
     flex-direction: column;
@@ -131,14 +130,6 @@ p {
     text-align: center;
 }
 
-
-/* Flexbox for Images */
-.destination-images {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
  .card-text {
     width: 280px;
     height: 200px;
@@ -147,11 +138,11 @@ p {
 
 /* Media Queries */
 @media (max-width: 600px) {
-    .destination-images {
+    .cards {
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
     }
-
     table {
         width: 100%;
     }
